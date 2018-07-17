@@ -5,7 +5,7 @@ var city;
 var img;
 
 function getWeather(zip) {
-  var query = 'http://api.openweathermap.org/data/2.5/weather?' + 'zip=' + zip + '&units=imperial&APPID=' + apiKey
+  var query = 'https://api.openweathermap.org/data/2.5/weather?' + 'zip=' + zip + '&units=imperial&APPID=' + apiKey
   getRequest(query)
 }
 
