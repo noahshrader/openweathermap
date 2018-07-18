@@ -1,12 +1,25 @@
 <html>
   <head>
     <title>OpenWeatherAPI Project</title>
-    <script src="weather.js"></script>
+    <link rel="stylesheet" href="css/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+    <script src="js/weather.js"></script>
   </head>
 
-  <body>
-    <div id="temperature"></div>
-    <div id="city"></div>
-    <img id="image" />
+  <body id="weather">
+    <div class="weather">
+      <section class="weather-input">
+        <input id="check-input" class="input" type="text" />
+        <button id="check-button" class="button" type="submit">Check</button>
+      </section>
+      <section class="weather-display">
+        <div class="weather-display-wrapper">
+          <img id="image" />
+          <h3 id="city"></h3>
+          <h1 id="temperature"></h1>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
