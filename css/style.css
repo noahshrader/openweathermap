@@ -108,9 +108,11 @@ html { font-size: 100%; }
 
 html, body { color: #222325; font-family: 'Poppins', sans-serif; height: 100%; width: 100%; overflow: hidden; }
 
-input[type="text"] { display: block; font-size: 1.6em; font-weight: 600; text-align: center; margin-bottom: 20px; height: 40px; width: 100%; border: 0; outline: 0; }
+input[type="text"] { display: block; font-size: 1.6em; font-weight: 600; text-align: center; text-transform: capitalize; margin-bottom: 20px; height: 40px; width: 100%; border: 0; outline: 0; }
 
-button { display: block; width: 100%; outline: 0; border-radius: 2px; }
+button { display: block; line-height: 45px; width: 100%; outline: 0; background: #efefef; border-radius: 2px; border: 0; cursor: pointer; }
+
+button:hover { background: #e4e4e4; }
 
 .weather { display: flex; height: 100%; }
 

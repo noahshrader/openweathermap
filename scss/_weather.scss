@@ -26,9 +26,17 @@ input[type="text"] {
 
 button {
   display: block;
+  line-height: 45px;
   width: 100%;
   outline: 0;
+  background: #efefef;
   border-radius: 2px;
+  border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: #e4e4e4;
+  }
 }
 
 .weather {
