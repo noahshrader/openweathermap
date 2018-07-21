@@ -1,7 +1,30 @@
+html {
+  font-size: 100%;
+}
+
 html,
 body {
+  color: #222325;
   font-family: 'Poppins', sans-serif;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+input {
+  display: block;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 40px;
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+
+button {
+  display: block;
   width: 100%;
 }
 
@@ -13,10 +36,11 @@ body {
   &-input {
     display: flex;
     flex: 1;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 60px;
-    min-width: 500px;
+    min-width: 300px;
   }
 
   &-display {
