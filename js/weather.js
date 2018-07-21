@@ -7,8 +7,17 @@ var img;
 
 // Check the input from user after submission
 function checkWeather() {
+
+  // Check weather when the submit button is clicked
   var checkWeatherButton = document.getElementById('check-button')
   checkWeatherButton.onclick = function() {
+    var checkWeatherInput = document.getElementById('check-input').value
+    getWeather(checkWeatherInput)
+  }
+
+  // If there's already an input value, go ahead and check
+  if (localStorage.getItem('weatherInput') !== null) {
+    document.getElementById('check-input').value = localStorage.getItem('weatherInput');
     var checkWeatherInput = document.getElementById('check-input').value
     getWeather(checkWeatherInput)
   }
@@ -19,6 +28,11 @@ function getWeather(checkWeatherInput) {
   let method = isNaN(checkWeatherInput) ? 'q' : 'zip'
   // Example: https://api.openweathermap.org/data/2.5/weather?zip=38133&units=imperial&APPID=b72d10b7b527b805c5445dcce41e666c
   let query = `https://api.openweathermap.org/data/2.5/weather?${method}=${checkWeatherInput}&units=imperial&APPID=${apiKey}`
+
+  // Save input for future use
+  localStorage.setItem('weatherInput', checkWeatherInput);
+
+  // Let's get the weather
   getRequest(query)
 }
 
