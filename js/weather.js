@@ -24,20 +24,6 @@ function getWeather(checkWeatherInput) {
 
 // Request info
 function getRequest(query) {
-  // var request = new XMLHttpRequest() // Get back JSON object
-  // request.onreadystatechange = function() { // When we get data back, let's do something with it
-  //   if (request.readyState == 4 && request.status == 200) {
-  //     var data = JSON.parse(request.responseText)
-  //     var weather = {}
-  //     weather.img = data.weather[0].icon
-  //     weather.city = data.name
-  //     weather.temp = Math.round(data.main.temp)
-  //     weather.desc = data.weather[0].main
-  //     update(weather)
-  //   }
-  // }
-  // request.open('GET', query, true)
-  // request.send()
 
   // Let's use Fetch API
   fetch(query).then(response => {
