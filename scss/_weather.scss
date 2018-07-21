@@ -52,5 +52,26 @@ button {
     justify-content: center;
     text-align: center;
     background: #f4f4f4;
+    transition: 1s linear;
+
+    // When it's hot
+    .hot & {
+      background: #FFAB91;
+    }
+
+    // When it's warm
+    .warm & {
+      background: #FFE082;
+    }
+
+    // When it's cool
+    .cool & {
+      background: #80DEEA;
+    }
+
+    // When it's cold
+    .cold & {
+      background: #90CAF9;
+    }
   }
 }

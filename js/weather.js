@@ -55,8 +55,10 @@ function update(weather) {
   // Check the temperature and assign a class based on feeling of weather
   if (weather.temp >= 85) {
     weatherContainer.classList.add('hot')
-  } else if (weather.temp < 90 && weather.temp >= 55) {
+  } else if (weather.temp < 90 && weather.temp >= 65) {
     weatherContainer.classList.add('warm')
+  } else if (weather.temp < 65 && weather.temp >= 55) {
+    weatherContainer.classList.add('cool')
   } else {
     weatherContainer.classList.add('cold')
   }
