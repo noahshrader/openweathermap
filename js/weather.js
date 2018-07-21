@@ -17,7 +17,7 @@ function checkWeather() {
 // Form the call to openweathermap.org
 function getWeather(checkWeatherInput) {
   // Example: https://api.openweathermap.org/data/2.5/weather?zip=38133&units=imperial&APPID=b72d10b7b527b805c5445dcce41e666c
-  var query = 'https://api.openweathermap.org/data/2.5/weather?' + 'zip=' + checkWeatherInput + '&units=imperial&APPID=' + apiKey
+  var query = `https://api.openweathermap.org/data/2.5/weather?zip=${checkWeatherInput}&units=imperial&APPID=${apiKey}`
   getRequest(query)
 }
 
@@ -50,8 +50,6 @@ function getRequest(query) {
     update(weather)
   })
 }
-
-
 
 function update(weather) {
   var weatherContainer = document.getElementById('weather')
