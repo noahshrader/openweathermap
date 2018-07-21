@@ -16,8 +16,9 @@ function checkWeather() {
 
 // Form the call to openweathermap.org
 function getWeather(checkWeatherInput) {
+  let method = isNaN(checkWeatherInput) ? 'q' : 'zip'
   // Example: https://api.openweathermap.org/data/2.5/weather?zip=38133&units=imperial&APPID=b72d10b7b527b805c5445dcce41e666c
-  var query = `https://api.openweathermap.org/data/2.5/weather?zip=${checkWeatherInput}&units=imperial&APPID=${apiKey}`
+  let query = `https://api.openweathermap.org/data/2.5/weather?${method}=${checkWeatherInput}&units=imperial&APPID=${apiKey}`
   getRequest(query)
 }
 
