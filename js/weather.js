@@ -35,11 +35,13 @@ function getRequest(query) {
     weather.temp = Math.round(data.main.temp)
     weather.desc = data.weather[0].main
     update(weather)
+  }).catch( err => {
+    alert('Oops! That\'s not a city! Try again.')
   })
 }
 
 function update(weather) {
-  var weatherContainer = document.getElementById('weather')
+  let weatherContainer = document.getElementById('weather')
 
   // Set the weather content
   temperature.innerHTML = weather.temp + '&#176;'
